@@ -10,7 +10,7 @@ const eqArrays = function(arr1, arr2) {
   return check === arr1.length; //if every value is same, return true. or false.
 };
 
-const assertEqual = function(actual, expected) {
+const assertArraysEqual = function(actual, expected) {
 
   if (eqArrays(actual, expected)) console.log(` 💯 Assertion Passed: ${actual} === ${expected}`);
 
