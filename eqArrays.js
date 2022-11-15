@@ -11,13 +11,13 @@ const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] === arr2[i]) check++; //check if value is same
   }
-
+  
   return check === arr1.length; //if every value is same, return true. or false.
 };
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
 
-//console.log([1, 2, 3] === [1, 2, 3]); - how is this false?!?!?!
+//console.log([1, 2, 3] === [1, 2, 3]); - how is this false?
 
 console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
 
