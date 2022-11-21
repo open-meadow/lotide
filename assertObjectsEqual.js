@@ -67,3 +67,9 @@ assertObjectsEqual(cd, cd2); // => false
 
 const cd3 = { c: ["2", 12], d: 15 };
 assertObjectsEqual(cd, cd3); // => false
+
+const cd4 = {};
+assertObjectsEqual(cd, cd4); // => false
+
+const cd5 = {};
+assertObjectsEqual(cd5, cd4); // => true
