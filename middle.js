@@ -1,22 +1,22 @@
-const eqArrays = function(arr1, arr2) {
-  // if array lengths are not equal, return false
-  if (arr1.length !== arr2.length) return false;
+// const eqArrays = function(arr1, arr2) {
+//   // if array lengths are not equal, return false
+//   if (arr1.length !== arr2.length) return false;
   
-  let check = 0;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) check++; //check if value is same
-  }
+//   let check = 0;
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] === arr2[i]) check++; //check if value is same
+//   }
   
-  return check === arr1.length; //if every value is same, return true. or false.
-};
+//   return check === arr1.length; //if every value is same, return true. or false.
+// };
 
-const assertArraysEqual = function(actual, expected) {
+// const assertArraysEqual = function(actual, expected) {
 
-  if (eqArrays(actual, expected)) console.log(` 💯 Assertion Passed: ${actual} === ${expected}`);
+//   if (eqArrays(actual, expected)) console.log(` 💯 Assertion Passed: ${actual} === ${expected}`);
 
-  else console.log(` 💩 Assertion Failed: ${actual} != ${expected}`);
+//   else console.log(` 💩 Assertion Failed: ${actual} != ${expected}`);
 
-};
+// };
 
 const middle = function(arr) {
   
@@ -41,19 +41,4 @@ const middle = function(arr) {
   
 };
 
-assertArraysEqual(middle([1]),[]); // => []
-assertArraysEqual(middle([1, 2]),[]); // => []
-assertArraysEqual(middle([1, 2, 3]),[2]); // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]); // => [3]
-assertArraysEqual(middle([1, 2, 3, 4]),[2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
-
-// console.log(middle([]));
-// console.log(middle([1]));
-// console.log(middle([1, 2]));
-// console.log(middle([1, 2, 3]));
-// console.log(middle([1, 2, 3, 4, 5]));
-// console.log(middle([1, 2, 3, 4]));
-// console.log(middle([1, 2, 3, 4, 5, 6]));
-// console.log(middle([1, 2, 3, 4, 5, 6, 7, 8]));
-// console.log(middle([143, 212, 134, 463, 115, 986]));
+module.exports = middle;
