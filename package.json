@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@open-meadow/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lighthouse Labs Lotide project by Rohan Varughese",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,8 +14,8 @@
     "url": "git+https://github.com/open-meadow/lotide.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Rohan Varughese",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/open-meadow/lotide/issues"
   },
