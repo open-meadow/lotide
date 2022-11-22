@@ -1,7 +1,7 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) console.log(` 💯 Assertion Passed: ${actual} === ${expected}`);
-  else console.log(` 💩 Assertion Failed: ${actual} != ${expected}`);
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) console.log(` 💯 Assertion Passed: ${actual} === ${expected}`);
+//   else console.log(` 💩 Assertion Failed: ${actual} != ${expected}`);
+// };
 
 const countLetters = function(str) {
   let newStr = str.replace(/ /g,"");
@@ -15,8 +15,10 @@ const countLetters = function(str) {
   return strCount;
 }
 
-console.log(countLetters('lighthouse in the house'));
-console.log(countLetters('poopoo'));
+// console.log(countLetters('lighthouse in the house'));
+// console.log(countLetters('poopoo'));
 
-assertEqual((countLetters('lighthouse in the house')["i"]), 2);
-assertEqual((countLetters('poopoo')["p"]), 4);
+// assertEqual((countLetters('lighthouse in the house')["i"]), 2);
+// assertEqual((countLetters('poopoo')["p"]), 4);
+
+module.exports = countLetters;
