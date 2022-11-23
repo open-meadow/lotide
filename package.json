@@ -1,6 +1,6 @@
 {
   "name": "@open-meadow/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lighthouse Labs Lotide project by Rohan Varughese",
   "main": "assertArraysEqual.js",
   "directories": {
