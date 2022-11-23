@@ -23,8 +23,18 @@ const eqObjects = function (object1, object2) {
 
   //console.log(Object.keys(object1).length === Object.keys(object2).length);
 
+  // console.log("=====================================")
 
-  if (Object.keys(object1).length !== Object.keys(object2).length) return false;
+  // console.log(object1);
+  // console.log(object2);
+
+
+  if (Object.values(object1).length !== Object.values(object2).length) {
+    // console.log(Object.values(object1));
+    // console.log(Object.values(object2));
+    
+    return false;
+  } 
 
   else {
 
@@ -34,9 +44,19 @@ const eqObjects = function (object1, object2) {
     //console.log(values1);
     for (let i = 0; i < keys1.length; i++) {
 
+      console.log("Array!", object1[keys1[i]], object2[keys1[i]]);
+
+      console.log(typeof(object1[keys1[i]]), typeof(object2[keys1[i]]));
+
+      if(typeof object1[keys1[i]] === 'object' || typeof object2[keys1[i]] === "object") {
+        console.log(eqObjects(object1[keys1[i]], object2[keys1[i]]));
+        if (eqObjects(object1[keys1[i]], object2[keys1[i]]) === false) return false;
+        else continue;
+      }
+
       if (Array.isArray(object1[keys1[i]]) && Array.isArray(object2[keys1[i]])) {
 
-        //console.log("Array!", object1[keys1[i]], object2[keys1[i]]);
+        
 
         if (eqArrays(object1[keys1[i]], object2[keys1[i]]) === true) {
           continue;
@@ -53,22 +73,3 @@ const eqObjects = function (object1, object2) {
 };
 
 module.exports = eqObjects;
-
-
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-
-// assertEqual(eqObjects(ab, ba), true);
-
-// const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false); // => false
-
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc), true); // => true
-
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false); // => false
-
-// const cd3 = { c: ["2", 12], d: 15 };
-// assertEqual(eqObjects(cd, cd3), false); // => false
